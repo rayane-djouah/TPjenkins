@@ -5,6 +5,18 @@ plugins {
     id "org.sonarqube" version "3.1.1"
     id "maven-publish"
 }
+
+dependencies {
+    testImplementation 'io.cucumber:cucumber-java:6.0.0'
+    testImplementation 'io.cucumber:cucumber-junit:6.0.0'
+    testImplementation 'junit:junit:4.12'
+
+}
+
+repositories {
+    mavenCentral()
+}
+
 apply plugin: 'maven-publish'
 
 group = 'com.example'
@@ -28,9 +40,3 @@ publishing {
     }
 }
 
-dependencies {
-    testImplementation 'io.cucumber:cucumber-java:6.0.0'
-    testImplementation 'io.cucumber:cucumber-junit:6.0.0'
-    testImplementation 'junit:junit:4.12'
-
-}
