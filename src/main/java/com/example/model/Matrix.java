@@ -6,7 +6,7 @@ public class Matrix {
 	private int ncols;
 	private double[][] data;
 
-	public Matrix() {
+	public Matrix() {   
 	}
 
 	public double[][] getData() {
