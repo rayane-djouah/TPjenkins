@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.example</groupId>
+  <artifactId>TP8_Jenkins</artifactId>
+  <versioning>
+    <latest>5.4-R</latest>
+    <release>5.4-R</release>
+    <versions>
+      <version>5.4-R</version>
+    </versions>
+    <lastUpdated>20240106211425</lastUpdated>
+  </versioning>
+</metadata>

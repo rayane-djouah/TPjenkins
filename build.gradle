@@ -7,22 +7,13 @@ plugins {
 }
 apply plugin: 'maven-publish'
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group = 'com.example'
+version = '5.4-R'
 
-repositories {
-    mavenCentral()
-}
-dependencies {
-    testImplementation 'io.cucumber:cucumber-java:6.0.0'
-    testImplementation 'io.cucumber:cucumber-junit:6.0.0'
-    testImplementation 'junit:junit:4.12'
-
-}
 publishing {
     repositories {
         maven {
-            url 'https://mymavenrepo.com/repo/cEmjfkxugPlzLxXg1A2B/'
+            url 'https://mymavenrepo.com/repo/cEmjfkxugPlzLxXg1A2B'
             credentials {
                 username 'myMavenRepo'
                 password 'test0005'
@@ -35,4 +26,11 @@ publishing {
             from components.java
         }
     }
+}
+
+dependencies {
+    testImplementation 'io.cucumber:cucumber-java:6.0.0'
+    testImplementation 'io.cucumber:cucumber-junit:6.0.0'
+    testImplementation 'junit:junit:4.12'
+
 }

@@ -1,0 +1,60 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.example",
+    "module": "TP8_Jenkins",
+    "version": "5.4-R",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "TP8_Jenkins-5.4-R.jar",
+          "url": "TP8_Jenkins-5.4-R.jar",
+          "size": 4038,
+          "sha512": "cbcac44bc41fff2b292be7a8ddcad60d5874de2ff6e827bbbc2e0274f84217f794a90c63e9a39a13c45c3ce8bc4e9fd60ae8f17fd9b19e4cd8bb5e63aa62fdf2",
+          "sha256": "3ad063a40798c7a50c0a01d0c9b682a787da798d011b9af3a27cf2c901fc6eda",
+          "sha1": "84d1a82dcddfd30f507c2b1fdac42cfb1cc4f506",
+          "md5": "dc8571931001729f12b3a5e6f08b1efc"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "TP8_Jenkins-5.4-R.jar",
+          "url": "TP8_Jenkins-5.4-R.jar",
+          "size": 4038,
+          "sha512": "cbcac44bc41fff2b292be7a8ddcad60d5874de2ff6e827bbbc2e0274f84217f794a90c63e9a39a13c45c3ce8bc4e9fd60ae8f17fd9b19e4cd8bb5e63aa62fdf2",
+          "sha256": "3ad063a40798c7a50c0a01d0c9b682a787da798d011b9af3a27cf2c901fc6eda",
+          "sha1": "84d1a82dcddfd30f507c2b1fdac42cfb1cc4f506",
+          "md5": "dc8571931001729f12b3a5e6f08b1efc"
+        }
+      ]
+    }
+  ]
+}
