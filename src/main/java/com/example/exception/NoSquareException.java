@@ -6,7 +6,7 @@ public class NoSquareException extends Exception {
 		super();
 		// TODO Auto-generated constructor stub
 	
-	} 
+	}  
 
 	public NoSquareException(String message) {
 		super(message);
