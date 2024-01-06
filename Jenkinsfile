@@ -59,12 +59,12 @@ pipeline {
     post {
         failure {
             script {
-                mail = "Build terminé avec échec"
+                env.mail = "Build terminé avec échec"
             }
         }
         success {
             script {
-                mail = "Build terminé avec succès"
+                env.mail = "Build terminé avec succès"
             }
         }
     }
