@@ -1,11 +1,20 @@
 pipeline {
     agent any
-    environment {
-        mail = ''
-    }
     stages {
         // Phase 1: La phase Test
         stage('Test') {
+            post {
+                failure {
+                    script {
+                        mail = "Tests failed"
+                    }
+                }
+                success {
+                    script {
+                        mail = "Tests passed"
+                    }
+                }
+            }
             steps {
                 // 1. Lancement des tests unitaires.
                 bat './gradlew test'
@@ -18,6 +27,18 @@ pipeline {
 
         // Phase 2: La phase Code Analysis
         stage('Code Analysis') {
+            post {
+                failure {
+                    script {
+                        mail += "\nCode Analysis failed"
+                    }
+                }
+                success {
+                    script {
+                        mail = "\nCode Analysis passed"
+                    }
+                }
+            }
             steps {
                 withSonarQubeEnv('sonar') {
                     bat(script: './gradlew sonarqube', returnStatus: true)
@@ -29,6 +50,19 @@ pipeline {
 
         // Phase 4: La phase Build
         stage('Build') {
+            post {
+                failure {
+                    script {
+                        mail = "\nBuild failed"
+                    }
+                }
+                success {
+                    script {
+                        mail = "\nBuild passed"
+                    }
+                }
+            }
+
             steps {
                 // 1. Génération du fichier Jar.
                 // 2. Génération de la documentation.
@@ -41,6 +75,19 @@ pipeline {
 
         // Phase 5: La phase Deploy
         stage('Deployment') {
+            post {
+                failure {
+                    script {
+                        mail = "\nDeploy failed"
+                    }
+                }
+                success {
+                    script {
+                        mail = "\nDeployed successfully"
+                    }
+                }
+            }
+
             steps {
                 bat './gradlew publish'
                 // Assuming you have a publish task for mymavenrepo.com
@@ -52,20 +99,10 @@ pipeline {
             steps {
                 mail(subject: 'Project JenkinsOGL notification', body: mail, cc: 'kr_djouah@esi.dz', bcc:'ks_oukil@esi.dz')
                 slackSend(token: '', baseUrl: 'https://hooks.slack.com/services/', channel: '#general', message: 'Notification for JenkinsOGL has been sent to Slack')
-                // Additional notifications for Google Chrome and Signal as needed
             }
         }
     }
-    post {
-        failure {
-            script {
-                env.mail = "Build terminé avec échec"
-            }
-        }
-        success {
-            script {
-                env.mail = "Build terminé avec succès"
-            }
-        }
+    environment {
+        mail = ''
     }
 }
