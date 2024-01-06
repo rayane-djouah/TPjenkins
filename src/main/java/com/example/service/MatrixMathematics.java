@@ -86,9 +86,7 @@ public class MatrixMathematics {
 		return mat;
 	}
 
-	public int add (int a,int b){
-		return a+b;
-	}
+
 
 	/**
 	 * Transpose of a matrix - Swap the columns with rows
@@ -119,6 +117,15 @@ public class MatrixMathematics {
 	public static Matrix inverse(Matrix matrix) throws NoSquareException {
 		return (transpose(cofactor(matrix)).multiplyByConstant(1.0/determinant(matrix)));
 	}
+
+
+	public  void test() {
+
+	}
+
+
+
+
 	
 	
 }

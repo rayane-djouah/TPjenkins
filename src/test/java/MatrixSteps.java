@@ -11,12 +11,13 @@ import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 public class MatrixSteps {
     double det ;
-    double[][] transposeMatrix ;
-    double[][] inverseMatrix ;
-    double[][] cofactorMatrix ;
+    Matrix transposeMatrix ;
+    Matrix inverseMatrix ;
+    Matrix cofactorMatrix ;
     Matrix mat;
 
     @Given("I have A Matrix")
@@ -59,22 +60,24 @@ public class MatrixSteps {
             i=i+1;
         }
         mat.setData(data);
-        transposeMatrix = MatrixMathematics.transpose(mat).getValues();
+        transposeMatrix = MatrixMathematics.transpose(mat);
     }
 
     @Then("The result of transpose is")
     public void iFindAsTransposeResult(DataTable table) {
-        double [][] Tdata = new double[2][3];
+        double [][] data = new double[2][3];
         List<Map<String, Double>> rows = table.asMaps(String.class, Double.class);
         int i =0;
         for (Map<String, Double> columns : rows){
             int j =0;
-            Tdata[i][j]= columns.get("col1");
-            Tdata[i][j+1] = columns.get("col2");
-            Tdata[i][j+2]= columns.get("col3");
+            data[i][j]= columns.get("col1");
+            data[i][j+1] = columns.get("col2");
+            data[i][j+2]= columns.get("col3");
             i=i+1;
         }
-        assertArrayEquals(Tdata,transposeMatrix);
+        Matrix result = new Matrix() ;
+        result.setData(data);
+        assertEquals(result,transposeMatrix);
 
 
     }
@@ -93,21 +96,23 @@ public class MatrixSteps {
             i=i+1;
         }
         mat.setData(data);
-        inverseMatrix = MatrixMathematics.inverse(mat).getValues();
+        inverseMatrix = MatrixMathematics.inverse(mat);
     }
 
     @Then("The result of inverse is")
     public void iFindAsInverseResult(DataTable table) {
-        double [][] Tdata = new double[2][2];
+        double [][] data = new double[2][2];
         List<Map<String, Double>> rows = table.asMaps(String.class, Double.class);
         int i =0;
         for (Map<String, Double> columns : rows){
             int j =0;
-            Tdata[i][j]= columns.get("col1");
-            Tdata[i][j+1] = columns.get("col2");
+            data[i][j]= columns.get("col1");
+            data[i][j+1] = columns.get("col2");
             i=i+1;
         }
-        assertArrayEquals(Tdata,inverseMatrix);
+        Matrix result = new Matrix() ;
+        result.setData(data);
+        assertEquals(result,inverseMatrix);
 
 
     }
@@ -127,21 +132,23 @@ public class MatrixSteps {
             i=i+1;
         }
         mat.setData(data);
-        cofactorMatrix = MatrixMathematics.cofactor(mat).getValues();
+        cofactorMatrix = MatrixMathematics.cofactor(mat);
     }
 
     @Then("The result of cofactor is")
     public void iFindAsCofactoreResult(DataTable table) {
-        double [][] Tdata = new double[2][2];
+        double [][] data = new double[2][2];
         List<Map<String, Double>> rows = table.asMaps(String.class, Double.class);
         int i =0;
         for (Map<String, Double> columns : rows){
             int j =0;
-            Tdata[i][j]= columns.get("col1");
-            Tdata[i][j+1] = columns.get("col2");
+            data[i][j]= columns.get("col1");
+            data[i][j+1] = columns.get("col2");
             i=i+1;
         }
-        assertArrayEquals(Tdata,cofactorMatrix);
+        Matrix result = new Matrix() ;
+        result.setData(data);
+        assertEquals(result,cofactorMatrix);
 
 
     }

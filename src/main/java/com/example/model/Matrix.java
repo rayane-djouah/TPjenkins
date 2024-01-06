@@ -75,4 +75,29 @@ public class Matrix {
 		}
 		return mat;
 	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if(this == obj) {
+			return true;
+		}
+
+		if(obj == null || obj.getClass()!= this.getClass()) {
+			return false;
+		}
+		Matrix matrix = (Matrix) obj;
+		for (int i =0;i<matrix.nrows;i++) {
+			for (int j=0;j< matrix.ncols;j++) {
+				if(matrix.getValueAt(i,j)!= this.getValueAt(i,j)) {
+					return false;
+				}
+			}
+		}
+
+
+	return  true;
+
+	}
+
 }
