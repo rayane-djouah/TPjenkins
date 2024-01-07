@@ -118,7 +118,7 @@ public class MatrixMathematics {
 		double det = determinant(matrix);
 		if(det == 0)
 		throw new NoInverseException();
-		return (transpose(cofactor(matrix)).multiplyByConstant(1.0/determinant(matrix)));
+		return (transpose(cofactor(matrix)).multiplyByConstant(1.0/det));
 	}
 
 
