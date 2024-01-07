@@ -11,9 +11,6 @@ public class MatrixMathematics {
 	 */
 	private MatrixMathematics(){}
 	
-
-	
-	
 	/**
 	 * Determinant of a square matrix
 	 * The following function find the determinant in a recursively. 
