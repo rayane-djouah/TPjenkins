@@ -78,7 +78,8 @@ public class Matrix {
 
 
 
-/*
+
+
 	@Override
 	public boolean equals(Object obj) {
 		if(this == obj) {
@@ -100,7 +101,8 @@ public class Matrix {
 	return  true;
 
 	}
-*/
+	
+
 
 
 }
