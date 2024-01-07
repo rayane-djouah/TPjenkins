@@ -1,6 +1,7 @@
 package com.example.service;
 
 import com.example.exception.NoSquareException;
+import com.example.exception.NoInverseException;
 import com.example.model.Matrix;
 
 public class MatrixMathematics {
@@ -115,7 +116,7 @@ public class MatrixMathematics {
 	 * @throws NoSquareException
 	 */
 	public static Matrix inverse(Matrix matrix) throws NoSquareException, NoInverseException{
-		float det = determinant(matrix);
+		double det = determinant(matrix);
 		if(det == 0)
 		throw new NoInverseException();
 		return (transpose(cofactor(matrix)).multiplyByConstant(1.0/determinant(matrix)));
