@@ -103,4 +103,16 @@ public class Matrix {
 
 	}
 
+	@Override
+	public int hashCode() {
+		int result = 0;
+		for (int i = 0; i < nrows; i++) {
+			for (int j = 0; j < ncols; j++) {
+				result += data[i][j];
+			}
+		}
+		return result;
+	}
+
+
 }
