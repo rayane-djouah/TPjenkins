@@ -11,6 +11,8 @@ public class MatrixMathematics {
 	 */
 	private MatrixMathematics(){}
 	
+
+	
 	
 	/**
 	 * Determinant of a square matrix
