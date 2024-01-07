@@ -59,11 +59,11 @@ pipeline {
         parallel{
         stage('Email Notification'){
         steps {
-            mail(subject: 'success notification', body: mail, cc: 'kr_djouah@esi.dz', bcc: 'ks_oukil@esi.dz')
+            mail(subject: 'success notification', body: mail, cc: 'kr_djouah@esi.dz', bcc: 'kr_djouah@esi.dz')
         }
         }
         stage('Other Notifications'){
-        steps{//notifyEvents message: mail, token: ''
+        steps{notifyEvents message: mail, token: '60pmmja-34f4rrv7t3xdkbnhvbdplb-b'
         }
         }
         }
