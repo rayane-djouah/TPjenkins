@@ -1,37 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Matrix" tests="4" skipped="0" failures="3" errors="0" timestamp="2024-01-07T12:37:47" hostname="RAYANE" time="1.13">
+<testsuite name="Matrix" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-01-07T13:34:06" hostname="RAYANE" time="0.263">
   <properties/>
-  <testcase name="Determinant" classname="Matrix" time="1.057"/>
-  <testcase name="Transpose" classname="Matrix" time="0.034">
-    <failure message="java.lang.AssertionError: expected:&lt;com.example.model.Matrix@d65543d&gt; but was:&lt;com.example.model.Matrix@556184&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;com.example.model.Matrix@d65543d&gt; but was:&lt;com.example.model.Matrix@556184&gt;
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at MatrixSteps.iFindAsTransposeResult(MatrixSteps.java:80)
-	at ✽.The result of transpose is(file:///C:/Users/rayan/OneDrive/Bureau/TPjenkins/Features/matrix.feature:20)
-</failure>
-  </testcase>
-  <testcase name="Inverse" classname="Matrix" time="0.019">
-    <failure message="java.lang.AssertionError: expected:&lt;com.example.model.Matrix@76f2403d&gt; but was:&lt;com.example.model.Matrix@6aff1172&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;com.example.model.Matrix@76f2403d&gt; but was:&lt;com.example.model.Matrix@6aff1172&gt;
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at MatrixSteps.iFindAsInverseResult(MatrixSteps.java:115)
-	at ✽.The result of inverse is(file:///C:/Users/rayan/OneDrive/Bureau/TPjenkins/Features/matrix.feature:31)
-</failure>
-  </testcase>
-  <testcase name="Cofactor" classname="Matrix" time="0.018">
-    <failure message="java.lang.AssertionError: expected:&lt;com.example.model.Matrix@172e7d9a&gt; but was:&lt;com.example.model.Matrix@733924ea&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;com.example.model.Matrix@172e7d9a&gt; but was:&lt;com.example.model.Matrix@733924ea&gt;
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at MatrixSteps.iFindAsCofactoreResult(MatrixSteps.java:151)
-	at ✽.The result of cofactor is(file:///C:/Users/rayan/OneDrive/Bureau/TPjenkins/Features/matrix.feature:42)
-</failure>
-  </testcase>
+  <testcase name="Determinant" classname="Matrix" time="0.253"/>
+  <testcase name="Transpose" classname="Matrix" time="0.003"/>
+  <testcase name="Inverse" classname="Matrix" time="0.003"/>
+  <testcase name="Cofactor" classname="Matrix" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

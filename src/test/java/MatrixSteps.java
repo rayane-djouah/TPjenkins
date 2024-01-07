@@ -1,4 +1,5 @@
 import com.example.exception.NoSquareException;
+import com.example.exception.NoInverseException;
 import com.example.model.Matrix;
 import com.example.service.MatrixMathematics;
 import io.cucumber.datatable.DataTable;
@@ -85,7 +86,7 @@ public class MatrixSteps {
     // Inverse
 
     @When("I compute inverse of")
-    public void iComputeInverseOf(DataTable table) throws NoSquareException {
+    public void iComputeInverseOf(DataTable table) throws NoSquareException, NoInverseException {
         double [][] data = new double[2][2];
         List<Map<String, Double>> rows = table.asMaps(String.class, Double.class);
         int i =0;
