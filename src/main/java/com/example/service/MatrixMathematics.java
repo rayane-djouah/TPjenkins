@@ -6,8 +6,6 @@ import com.example.model.Matrix;
 
 public class MatrixMathematics {
 
-
-
 	/**
 	 * This class a matrix utility class and cannot be instantiated.
 	 */
